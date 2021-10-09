@@ -33,6 +33,37 @@ window.onload = function(){
               
           }
         });
+
+        item.addEventListener('mouseover',function(){
+            item.classList.add('hover');      
+        }
+        
+        );
+
+
+        item.addEventListener('mouseout',function(){
+
+            if (item.innerHTML == "X")
+            {
+                item.setAttribute("class","square X"); 
+            }
+
+            else if (item.innerHTML == "O")
+            {
+                item.setAttribute("class","square O"); 
+            }
+
+            else
+            {
+                item.setAttribute("class","square")
+            }
+
+            
+            
+                 
+        }
+        
+        );
     });
     
     

@@ -117,7 +117,7 @@ window.onload = function(){
                 d_check =true;
             };
 
-         if (game_prog[2] == game_prog[4] && game_prog[2]== game_prog[6] && game_prog[4] == game_prog[6])
+        if (game_prog[2] == game_prog[4] && game_prog[2]== game_prog[6] && game_prog[4] == game_prog[6])
             {
                 winner = game_prog[2];
                 d_check =true;
@@ -134,11 +134,20 @@ window.onload = function(){
     {   
         
         win.innerHTML = "Congratulations! "+ winner +" is the Winner!";
-        win.setAttribute("class","you-won")
+        win.setAttribute("class","you-won");
+        board.style.pointerEvents = 'none';
+            
+
     }
 
     }
     
+    
+    var new_game =document.getElementById("game").getElementsByClassName("btn")
+    new_game[0].addEventListener("click",function(){
+        window.location.reload(true);
+    })
+
     
    
     
